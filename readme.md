@@ -23,7 +23,7 @@ $ sudo foolproxy <remoteUrl> <localUrl>
 ## Exp
     
 ```bash
-sudo foolproxy https://as.alipayobjects.com/component/console-security-message/0.0.2/index.js ./index.js
+sudo foolproxy https://baidu.com/component/console-security-message/0.0.2/index.js ./index.js
 ```
     
 ## Feature

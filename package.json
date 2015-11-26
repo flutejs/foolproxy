@@ -2,7 +2,7 @@
   "name": "foolproxy",
   "version": "0.1.1",
   "engines": {
-    "node": ">=2.3.x"
+    "node": "2.3.x"
   },
   "description": "The most simple http & https proxy for mac",
   "contributors": [{
