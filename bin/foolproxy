@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+global.foolproxy_port = 2323
+
+require('colors')
+require('iconv-lite').extendNodeEncodings()
+
+var pkg = require('../package')
+var program = require('commander')
+
+var init = require('../lib/index')
+
+program.version(pkg.version)
+    .arguments('<remoteUrl> <localUrl>')
+    .option('-p --port <n>', 'setting foolproxy server port(default: ' + global.foolproxy_port + ')'.green)
+    .on('--help', function() {
+    })
+    .action(function (remoteUrl, localUrl) {
+      init(remoteUrl, localUrl)
+    })
+
+global.foolproxy_port = program.port || global.foolproxy_port
+
+program.parse(process.argv)
+
+if ( program.args.length === 0 ) {
+  console.log('Pleaes use: foolproxy <remoteUrl> <localUrl>'.green)
+}
+

@@ -1,0 +1,9 @@
+.dev
+.tmp
+.idea
+*.diff
+*.patch
+.DS_Store
+ssl
+dist
+node_modules
