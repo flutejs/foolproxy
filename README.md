@@ -50,7 +50,7 @@ $ sudo foolproxy ./my-proxy.json
 my-proxy.json
 {
   "https://baidu.com/component/console-security-message/0.0.2/index.js": "./index.js",
-  "foolproxy https://baidu.com/component/xxx/0.0.2/index.js": "http://taobao/xxx/index.js"
+  "https://baidu.com/component/xxx/0.0.2/index.js": "http://taobao/xxx/index.js"
 }
 ```
     
