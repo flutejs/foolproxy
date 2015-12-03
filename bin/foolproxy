@@ -1,0 +1,54 @@
+#!/usr/bin/env node
+
+//default port
+global.foolproxy_port = 2323
+
+require('colors')
+require('iconv-lite').extendNodeEncodings()
+
+var pkg = require('../package')
+var program = require('commander')
+
+var proxySingle = require('../lib/proxy-single')
+var proxyMulti = require('../lib/proxy-multi')
+
+function Usage() {
+  console.log('  Usage:\n')
+  console.log('    foolproxy <remoteUrl> <localUrl>\n')
+  console.log('      Exp:foolproxy https://xxxx.com/index.js ./index.js\n'.green)
+  console.log('    foolproxy <remoteUrl> <remoteUrl>\n')
+  console.log('      Exp:foolproxy https://xxxx.com/index.js https://bbbb.com/index.js\n'.green)
+  console.log('    foolproxy <localMappingFile> (only for http)\n')
+  console.log('      Exp:foolproxy ./my-proxy-mapping.json\n'.green)
+  console.log('  Github:\n')
+  console.log('    https://github.com/flutejs/foolproxy\n')
+}
+
+program
+    .version(pkg.version)
+    .option('-p --port <n>', 'setting foolproxy server port(default: ' + global.foolproxy_port + ')'.green)
+    .on('--help', function () {
+      Usage()
+    })
+
+program
+    .arguments('<remote> [mapping]')
+    .action(function (remote, mapping) {
+
+      if (mapping) {
+        proxySingle(remote, mapping)
+      } else {
+        proxyMulti(remote)
+      }
+
+    })
+
+program.parse(process.argv)
+
+//setting port
+global.foolproxy_port = program.port || global.foolproxy_port
+
+if (program.args.length === 0) {
+  Usage()
+}
+

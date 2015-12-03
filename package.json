@@ -1,0 +1,65 @@
+{
+  "name": "foolproxy",
+  "version": "2.0.0",
+  "description": "The most simple http & https proxy for mac",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=2.3.3"
+  },
+  "scripts": {
+    "test": "webpack && BABEL_JEST_STAGE=0 jest",
+    "build": "webpack",
+    "coveralls": "webpack && BABEL_JEST_STAGE=0 jest && cat ./coverage/lcov.info | coveralls",
+    "dev": "webpack -w"
+  },
+  "author": "https://github.com/nikogu",
+  "homepage": "https://github.com/flutejs/foolproxy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flutejs/foolproxy"
+  },
+  "bugs": {
+    "url": "https://github.com/flutejs/foolproxy/issues"
+  },
+  "licenses": "MIT",
+  "dependencies": {
+    "co": "~4.6.0",
+    "colors": "~1.1.2",
+    "commander": "~2.8.1",
+    "exit": "0.1.2",
+    "freeport": "^1.0.5",
+    "iconv-lite": "0.4.4",
+    "jschardet": "1.1.0",
+    "koa": "~0.21.0",
+    "request": "~2.65.0",
+    "server-destroy": "~1.0.1",
+    "thunkify": "~2.1.2",
+    "url": "0.11.0"
+  },
+  "devDependencies": {
+    "coveralls": "~2.11.4",
+    "jest-cli": "~0.8.0"
+  },
+  "tonicExampleFilename": "example.js",
+  "files": [
+    "lib"
+  ],
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/*",
+      "<rootDir>/lib/*"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testDirectoryName": "test",
+    "collectCoverage": true,
+    "collectCoverageOnlyFrom": {
+      "./lib/index.js": true
+    }
+  },
+  "keywords": [
+    "proxy"
+  ]
+}
