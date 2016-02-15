@@ -1,6 +1,6 @@
 {
   "name": "foolproxy",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "The most simple http & https proxy for mac",
   "engines": {
     "node": ">=2.3.3"
@@ -15,6 +15,9 @@
     "url": "https://github.com/flutejs/foolproxy/issues"
   },
   "licenses": "MIT",
+  "bin": {
+    "foolproxy": "./bin/foolproxy"
+  },
   "dependencies": {
     "co": "~4.6.0",
     "colors": "~1.1.2",
