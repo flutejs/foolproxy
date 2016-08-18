@@ -3,5 +3,8 @@
   ".json": "application/json",
   ".css": "text/css",
   ".htm": "text/html",
-  ".html": "text/html"
+  ".html": "text/html",
+  ".png": "image/png",
+  ".jpg": "image/jpg",
+  ".svg": "image/svg"
 }

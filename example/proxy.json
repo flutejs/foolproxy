@@ -1,4 +1,8 @@
 {
   "https://assets-cdn.github.com/assets/github-38420355f0921824aa67f10022361e0caf79deb18a722c1b8ead18c9b3bc694c.js": "./example/example.js",
-  "https://a.alipayobjects.com/designlab/App-5eb1da1b630947891ce8.json": "./example/example.js"
+  "https://a.alipayobjects.com/designlab/App-5eb1da1b630947891ce8.json": "./example/example.js",
+  "http://vuejs.org/js/vue.js": "./example/example.js",
+  "http://cdn.v2ex.com/static/js/jquery.js": "http://vuejs.org/js/vue.js",
+  "https://static.zhihu.com/static/revved/-/css/z.322c0315.css": "./example/example.css",
+  "https://designlab.alipay.com/api/v1/repositories": "./example/example.js"
 }
