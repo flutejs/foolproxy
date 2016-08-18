@@ -2,6 +2,7 @@
 ----
 ## 3.0.0
 - support proxy multi file (https)
+- support proxy json file
 - more humanized error log
 - add semicolon
 
