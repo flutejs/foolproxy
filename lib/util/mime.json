@@ -1,5 +1,6 @@
 {
   ".js": "application/x-javascript",
+  ".json": "application/json",
   ".css": "text/css",
   ".htm": "text/html",
   ".html": "text/html"

@@ -1,5 +1,9 @@
 # History
 ----
+## 3.0.0
+- support proxy multi file (https)
+- more humanized error log
+- add semicolon
 
 ## 2.0.4
 - fixed multi mine type bug
